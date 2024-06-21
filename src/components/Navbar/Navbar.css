@@ -18,13 +18,11 @@
 
 .navbarLogo {
   margin-left: 2rem;
-  text-decoration: none;
 }
 
 .navbarRight {
   width: 30vw;
   margin-right: 1.5rem;
-  /* background-color: black; */
 }
 
 .navbarRight ul {
@@ -33,6 +31,34 @@
   justify-content: space-around;
   cursor: pointer;
   font-size: 1.1rem;
+}
+
+#home,
+#register,
+#signin {
+  text-decoration: none;
+  color: black;
+  position: relative;
+}
+
+#home::after,
+#register::after,
+#signin::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  position: absolute;
+  bottom: -1px; /* Adjust as necessary */
+  left: 0;
+  transition: width 0.3s ease; /* Adjust timing function and duration as needed */
+}
+
+#home:hover::after,
+#register:hover::after,
+#signin:hover::after {
+  width: 100%; /* Expand the underline on hover */
 }
 
 @media (min-width: 300px) and (max-width: 600px) {

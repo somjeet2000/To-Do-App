@@ -10,9 +10,15 @@ export default function Navbar() {
         </Link>
         <div className="navbarRight">
           <ul>
-            <li>Home</li>
-            <li>Login</li>
-            <li>Register</li>
+            <Link to="/" id="home">
+              <li>Home</li>
+            </Link>
+            <Link to="/signin" id="signin">
+              <li>Signin</li>
+            </Link>
+            <Link to="/register" id="register">
+              <li>Register</li>
+            </Link>
           </ul>
         </div>
       </div>
