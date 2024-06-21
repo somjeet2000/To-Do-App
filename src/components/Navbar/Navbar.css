@@ -13,10 +13,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .navbarLogo {
   margin-left: 2rem;
+  text-decoration: none;
 }
 
 .navbarRight {
@@ -31,4 +33,10 @@
   justify-content: space-around;
   cursor: pointer;
   font-size: 1.1rem;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+  .navbarRight {
+    width: 60vw;
+  }
 }
