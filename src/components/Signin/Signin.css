@@ -1,0 +1,66 @@
+.signin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  margin: 0;
+}
+
+.signinContainer {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.signinAvatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #0077b6;
+  border-radius: 100%;
+  margin: 0 5rem 0 5rem;
+  /* background-color: #0077b6; */
+}
+
+.avatarImage {
+  height: 4rem;
+  margin: 1rem 1rem 0.4rem 1rem;
+}
+
+h1 {
+  margin: 1rem 0 1rem 0;
+  color: #333;
+}
+
+.signinInputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.signinInputContainer input,
+button {
+  width: 100%;
+  border: none;
+  border-radius: 0.2rem;
+  outline: none;
+}
+
+.signinInputContainer input {
+  border: 1px #03045e solid;
+  height: 2rem;
+  padding-left: 0.5rem;
+  box-sizing: border-box;
+}
+
+.loginButton {
+  background-color: #0077b6;
+  color: #caf0f8;
+  height: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+}

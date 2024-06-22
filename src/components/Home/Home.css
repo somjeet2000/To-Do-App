@@ -1,7 +1,7 @@
 .homeContainer {
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 90vh;
 }
 
 .homeSection {
@@ -49,4 +49,25 @@
   background-position: center;
   flex: 0 0 70%;
   background-size: contain;
+}
+
+@media (max-width: 600px) and (min-width: 450px) {
+  .homeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .homeContainer {
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    width: 100%;
+  }
+
+  .homeSection h1 {
+    margin: 2rem 2rem 2rem 2rem;
+  }
 }
