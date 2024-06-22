@@ -6,16 +6,18 @@ import { BrowserRouter, Link, Switch, Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Register from './components/Register/Register';
 import Signin from './components/Signin/Signin';
+import ToDo from './components/ToDo/Todo';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Navbar />
+        <Navbar signinTitle="Login" />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/todo" element={<ToDo />} />
         </Routes>
       </BrowserRouter>
     </div>

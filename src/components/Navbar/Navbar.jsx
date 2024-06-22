@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-export default function Navbar() {
+export default function Navbar(props) {
+  console.log(props);
   return (
     <nav>
       <div className="navbar">
@@ -14,7 +15,7 @@ export default function Navbar() {
               <li>Home</li>
             </Link>
             <Link to="/signin" id="signin">
-              <li>Signin</li>
+              <li>{props.signinTitle}</li>
             </Link>
             <Link to="/register" id="register">
               <li>Register</li>

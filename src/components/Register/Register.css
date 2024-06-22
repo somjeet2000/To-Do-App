@@ -1,0 +1,76 @@
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  margin: 0;
+}
+
+.registerContainer {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.registerAvatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #0077b6;
+  border-radius: 100%;
+  margin: 0 6rem 0 6rem;
+}
+
+.registerAvatarImage {
+  height: 4rem;
+  margin: 1rem 1.2rem 1rem 1.2rem;
+}
+
+h1 {
+  margin: 1rem 0 1rem 0;
+  color: #333;
+}
+
+.registerInputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.registerInputContainer input,
+button {
+  width: 100%;
+  border: none;
+  border-radius: 0.2rem;
+  outline: none;
+}
+
+.registerInputContainer input {
+  border: 1px #03045e solid;
+  height: 2rem;
+  padding-left: 0.5rem;
+  box-sizing: border-box;
+}
+
+.registerButton {
+  background-color: #0077b6;
+  color: #caf0f8;
+  height: 2rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.registerFirstLastName {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#firstname {
+  margin-right: 1rem;
+}
