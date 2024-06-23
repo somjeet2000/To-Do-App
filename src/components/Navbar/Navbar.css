@@ -21,8 +21,9 @@
 }
 
 .navbarRight {
-  width: 30vw;
-  margin-right: 1.5rem;
+  width: 40vw;
+  margin-top: 0.5rem;
+  /* margin-right: 1.5rem; */
 }
 
 .navbarRight ul {

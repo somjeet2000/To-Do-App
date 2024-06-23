@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import { useState } from 'react';
 
 export default function Navbar(props) {
-  console.log(props);
   return (
     <nav>
       <div className="navbar">
         <Link to="/">
-          <div className="navbarLogo">Logo</div>
+          <img src="Logo.png" className="navbarLogo" alt="ToDo App" />
         </Link>
         <div className="navbarRight">
           <ul>
@@ -20,6 +20,23 @@ export default function Navbar(props) {
             <Link to="/register" id="register">
               <li>Register</li>
             </Link>
+            <li>
+              <div className="form-check form-switch">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckDefault"
+                  // onClick={handleClick}
+                />
+                <label
+                  className="form-check-label"
+                  htmlFor="flexSwitchCheckDefault"
+                >
+                  Dark Mode
+                </label>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
