@@ -27,8 +27,8 @@
   margin: 1rem 1.2rem 1rem 1.2rem;
 }
 
-h1 {
-  margin: 1rem 0 1rem 0;
+.registerContainer h1 {
+  margin: 0.5rem 0 1rem 0;
   color: #333;
 }
 
@@ -38,7 +38,7 @@ h1 {
   justify-content: center;
   align-items: center;
   margin-bottom: 1rem;
-  gap: 1rem;
+  gap: 0.4rem;
 }
 
 .registerInputContainer input,
@@ -47,6 +47,29 @@ button {
   border: none;
   border-radius: 0.2rem;
   outline: none;
+}
+
+.firstLastNameContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.4rem;
+  gap: 0.5rem;
+}
+
+.firstName,
+.lastName {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.firstName,
+.lastName,
+.registerInputContainer label {
+  font-size: 0.9rem;
+  color: #bf2d31;
 }
 
 .registerInputContainer input {
@@ -62,15 +85,4 @@ button {
   height: 2rem;
   cursor: pointer;
   font-size: 1rem;
-}
-
-.registerFirstLastName {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-
-#firstname {
-  margin-right: 1rem;
 }
