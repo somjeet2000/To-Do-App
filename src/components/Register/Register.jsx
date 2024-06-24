@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
-export default function Register() {
+export default function Register(props) {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [userName, setUserName] = useState('');
@@ -64,11 +64,26 @@ export default function Register() {
 
   return (
     <div className="register">
-      <div className="registerContainer">
+      <div
+        className="registerContainer"
+        style={{
+          backgroundColor: props.mode === 'light' ? '#fff' : '#042743',
+          boxShadow:
+            props.mode === 'light'
+              ? '0 0 1rem rgba(0, 0, 0, 0.1)'
+              : '0 0 1rem rgba(255, 255, 255, 0.2)',
+        }}
+      >
         <div className="registerAvatar">
-          <FontAwesomeIcon className="registerAvatarImage" icon={faUser} />
+          <FontAwesomeIcon
+            className="registerAvatarImage"
+            icon={faUser}
+            style={{ color: props.mode === 'light' ? '#042743' : '#f7fff7' }}
+          />
         </div>
-        <h1>Register</h1>
+        <h1 style={{ color: props.mode === 'light' ? '#042743' : '#f7fff7' }}>
+          Register
+        </h1>
         <form onSubmit={handleSubmit}>
           <div className="registerInputContainer">
             <div className="firstLastNameContainer">
@@ -112,7 +127,7 @@ export default function Register() {
             <button className="registerButton">Register</button>
           </div>
         </form>
-        <p>
+        <p style={{ color: props.mode === 'light' ? '#042743' : '#f7fff7' }}>
           Existing User? <Link to="/signin">Login</Link>
         </p>
       </div>

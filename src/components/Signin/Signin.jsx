@@ -4,7 +4,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 
-export default function Signin() {
+export default function Signin(props) {
   const [username, setUsername] = useState('');
   const [usernameError, setUsernameError] = useState('');
   const [password, setPassword] = useState('');
@@ -47,11 +47,26 @@ export default function Signin() {
 
   return (
     <div className="signin">
-      <div className="signinContainer">
+      <div
+        className="signinContainer"
+        style={{
+          backgroundColor: props.mode === 'light' ? '#fff' : '#042743',
+          boxShadow:
+            props.mode === 'light'
+              ? '0 0 1rem rgba(0, 0, 0, 0.1)'
+              : '0 0 1rem rgba(255, 255, 255, 0.2)',
+        }}
+      >
         <div className="signinAvatar">
-          <FontAwesomeIcon className="avatarImage" icon={faUser} />
+          <FontAwesomeIcon
+            className="avatarImage"
+            icon={faUser}
+            style={{ color: props.mode === 'light' ? '#042743' : '#f7fff7' }}
+          />
         </div>
-        <h1>Login</h1>
+        <h1 style={{ color: props.mode === 'light' ? '#042743' : '#f7fff7' }}>
+          Login
+        </h1>
         <form onSubmit={handleSubmit}>
           <div className="signinInputContainer">
             <input
@@ -75,7 +90,7 @@ export default function Signin() {
             <button className="loginButton">Login</button>
           </div>
         </form>
-        <p>
+        <p style={{ color: props.mode === 'light' ? '#042743' : '#f7fff7' }}>
           New User? <Link to="/register">Register</Link>
         </p>
       </div>
